@@ -4,10 +4,12 @@ import javax.persistence.Column
 import javax.persistence.Entity
 import javax.persistence.GeneratedValue
 import javax.persistence.Id
+import javax.persistence.Table
 import javax.validation.constraints.Email
 import javax.validation.constraints.NotBlank
 
 @Entity
+@Table(name = "USERS")
 class User {
     @Id
     @GeneratedValue

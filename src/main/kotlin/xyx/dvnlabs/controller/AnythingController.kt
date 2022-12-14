@@ -33,9 +33,9 @@ class AnythingController {
     @Path("/list")
     fun findAll(
         @DefaultValue("")
-        @QueryParam("kindName") kindName: String
+        @QueryParam("kindName") kindName: String?
     ): DefaultResponse {
-        return anythingServices.searchKindName(kindName).defaultResponse()
+        return anythingServices.searchKindName(kindName ?: "").defaultResponse()
     }
 
 }
